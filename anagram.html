@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+		<title>Anagram Detector</title>
+	</head>
+
+	<body>
+		<div class='intro'>
+			<h1>Anagram Detector</h1>
+			<p>Please submit two words or phrases below and we will tell you if it is an anagram.</p>
+			<h4>What is an anagram?</h4>
+			<p>A word, phrase, or name formed by rearranging the letters of another, such as cinema, formed from iceman.</p>
+		</div>
+
+		<div class='wrapper'>
+		  <form id='nameForm'>
+		    <div class='form-inputs'>
+		        <label id='firstLabel' for='firstWord'>First word or phrase:</label>
+		        <input id='firstWord' type='text' maxlength='50'></input>
+						<br></br>
+						<label id='secondLabel' for='secondWord'>Second word or phrase:</label>
+		        <input id='secondWord' type='text' maxlength='50'></input>
+		    </div>
+		    <div class='form-sub'>
+		        <button id='subButton' type='button'>Check your anagram!</button>
+						<script type="text/javascript" src="anagramtest.js"></script>
+		    </div>
+			</form>
+
+			<div>
+		    <p id='result'></p>
+			</div>
+
+		</div>
+
+
+
+
+	</body>
+</html>
