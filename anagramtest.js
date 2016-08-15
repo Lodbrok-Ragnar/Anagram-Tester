@@ -13,7 +13,7 @@ function getUserInput()
     else
     {
       //normalizes to regular expression
-      var regex = /[\t ]/g;
+      var regex = /[\W ]/gi;
       var normalizedFirstWord = firstWord.replace(regex, '')
       var normalizedSecondWord = secondWord.replace(regex, '');
 
