@@ -17,10 +17,10 @@ function getUserInput()
       var normalizedFirstWord = firstWord.replace(regex, '')
       var normalizedSecondWord = secondWord.replace(regex, '');
 
-      //case when user enters duplicate word/phrases
-      if(normalizedFirstWord === normalizedSecondWord)
+      //case when user enters duplicate word/phrases or empty string
+      if(normalizedFirstWord === normalizedSecondWord || normalizedFirstWord === '' || normalizedSecondWord === '')
       {
-      result.textContent = 'No cheating! You submitted identical words!';
+      result.textContent = 'You submitted identical words or nothing at all, try again.';
       }
       //This is the core logic for anagram test:
       // 1. Ensure that the first normalized string is at least 1 character in length AND
@@ -30,6 +30,7 @@ function getUserInput()
         normalizedFirstWord.length > 0 &&
         normalizedFirstWord.length === normalizedSecondWord.length &&
         normalizedFirstWord.toLowerCase().split('').sort().join('') === normalizedSecondWord.toLowerCase().split('').sort().join('')
+      // In the future I may want to optimize this with a histogram approach (e.g. two dimensional array of each character - character + count)
       )
       {
       result.textContent = 'Your input, ' + firstWord + ' // ' + secondWord + ', is an anagram';
